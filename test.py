@@ -8,4 +8,4 @@ offset = np.matrix([[15.0], [15.0]])
 
 points3 = np.hstack((points1, points2 + offset))
 
-print(fit.manyCircles(points3, 2, algorithm='bullock'))
+print(fit.Circle(algorithm='bullock', solve='exact').many(points3, 2))
