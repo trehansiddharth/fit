@@ -21,7 +21,11 @@ To inherit from `Shape` (e.g. when implementing your own kind of shape fitter), 
 * **`Shape.initial_theta_function(self, points, numShapes)`** A function that stochastically generates a `numpy.matrix` of parameter column vectors that serve as the initial `theta` values in the algorithm to fit multiple shapes to data.
 * **`Shape.initial_lambda_function(self, points, numShapes)`** A function that computes the best value to initialize lambda with, which is often computed based on properties such as how spread apart the points are.
 
-### `circle = Circle(algorithm='bullock', solve='exact')`
+### `class Circle`
+
+Class for fitting circles to data in a scale- and translation-invariant way.
+
+#### `circle = Circle.__init__(algorithm='bullock', solve='exact')`
 Creates a circle fitter that fits a circle to a set of points. Radius and center of the circle are allowed to vary, and the algorithm for fitting a single circle and the strategy for doing so can be chosen.
 
 * **`algorithm` (string)** Algorithm used to compute the best fit circle
